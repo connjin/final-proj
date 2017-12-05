@@ -1,0 +1,423 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+  <title>Take a Knee</title>
+  <meta name="description" content="NFL Kneeling">
+
+     <link href="css/c3.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+		<!-- Brand -->
+	  <a class="navbar-brand" href="#">#TakeAKnee | The NFL Protests</a>
+
+	  <!-- Toggler/collapsibe Button -->
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <!-- Navbar links -->
+	  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+	    <ul class="navbar-nav">
+	      <li class="nav-item">
+	        <a class="nav-link" href="#map-intro">Map</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#tweets">Tweets</a>
+	      </li>
+	      <!-- <li class="nav-item">
+	      	<a class="nav-link" href="#">Photos</a>
+	      </li> -->
+	      <li class="nav-item">
+	        <a class="nav-link" href="#numbers">Data</a>
+	      </li> 
+	    </ul>
+	  </div> 
+	</nav>
+
+	<div class="col-sm-6 gif">
+		<img src="protest-home-gif.gif">
+	</div>
+
+	<div class="col-sm-12 header">
+		<h1>#TakeAKnee</h1>
+		<h6>An overview of the NFL kneeling protests.</h6>
+		<div class="social-icons">
+			<span class="fb icon"><a href="#"><img src="fb.png"></a></span>
+			<span class="twit icon"><a href="http://twitter.com/share?text=#TakeAKnee%20|%20The%20NFL%20Protests&url=http://conniehanzhangjin.com/mj487/final-proj/"><img src="twit.png"></a></span>
+			<span class="mail icon"><a href="mailto:connie.jin97@gmail.com"><img src="mail.png"></a></span>
+		</div>
+		<p style="font-style: italic; font-size: 80%;">By Connie Jin</p>
+	</div>
+
+	<div class="col-sm-2 hr-top"><hr></div>
+
+	<div class="col-sm-6 intro-text">
+		<p>During the 49ers' 2016 final preseason game, quarterback Colin Kaepernick knelt for the national anthem instead of taking a seat on the bench in protest of racial injustice and police brutality in America. He explained,</p>
+          <p>"I am not going to show pride in flag for a country that oppresses black people and people of color. To me, this is bigger than football and it would be selfish on my part to look the other way. There are bodies in the street and people getting paid leave and getting away with murder."</p>
+          <p>Kaepernick's actions soon became a polarizing issue amongst the American public, often along racial divides, and sparked a wave of similar protests among atheletes that continues today.</p>
+          <p>The hashtag "#VeteransForKaepernick" was created. He was voted the most disliked member of the NFL in a 2016 poll. Several public figures condemned his actions and fans boycotted the NFL, leading to a drop in ratings. He also received death threats.</p>
+	</div>
+
+	<div class="col-sm-6 the-counted">
+	</div>
+
+	<div class="col-sm-5 hr"><hr></div>
+
+	<div class="col-sm-6 map-intro" id="map-intro">
+		<p><b>The Kaepernick Effect</b></p>
+		<p style="font-style: italic;">Where and when did the protests occur? Take a look within the US and around the world – you might be surprised. These are just some of the many protests that have occured since August 26, 2016. Click on each marker for details of each protest.</p>
+	</div>
+
+	<div class="col-sm-6 map" id="map"></div>
+	<script>
+		function initMap() {
+        var center = {lat: 39.828, lng: -98.579};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: center
+        });
+
+        var infowindow1 = new google.maps.InfoWindow({
+          content:'<p>8/26/2016</p><h4 id="firstHeading" class="firstHeading">San Francisco quarterback Colin Kaepernick remains seated during anthem in preseason game.</h4><p>San Francisco 49ers backup quarterback Kaepernick remains seated during the national anthem at a preseason game against the Green Bay Packers. “I am not going to stand up to show pride in a flag for a country that oppresses black people and people of color,” Kaepernick told NFL.com. “To me, this is bigger than football and it would be selfish on my part to look the other way. There are bodies in the street and people getting paid leave and getting away with murder.” The 49ers and the NFL both expressed support for the quarterback’s right to sit, but his actions sparked a stream of controversy across the league.</p>'
+        });
+        var marker1 = new google.maps.Marker({
+          position: {lat: 37.402, lng: -121.968},
+          map: map,
+          title: 'San Francisco quarterback Colin Kaepernick remains seated during anthem in preseason game.'
+        });
+        marker1.addListener('click', function() {
+          infowindow1.open(map, marker1);
+        });
+
+
+        var infowindow2 = new google.maps.InfoWindow({
+          content:'<p>9/2/2016</p><h4 id="firstHeading" class="firstHeading">High school football player in Ohio kneels during anthem, receives racist threats. </h4><p>Ohio’s Rodney Axson didn’t plan on becoming the first high school athlete to join Kaepernick’s protests, but when he heard his teammates using the “N-word” to describe players on the other team, he changed his mind and took a knee during the anthem. The Brunswick High senior has received racist threats ever since. "Axson says he was called the N-word by teammates multiple times both verbally that day and in subsequent text messages. Later in the week, a Snapchat post surfaced with a photo of a hand-written piece of paper with four “N-Words” preceded by “F — k Rodney” and followed by “Lets Lynch Ni — ers.”"</p>'
+        });
+        var marker2 = new google.maps.Marker({
+          position: {lat: 41.243, lng: -81.808},
+          map: map,
+          title: 'High school football player in Ohio kneels during anthem, receives racist threats.'
+        });
+        marker2.addListener('click', function() {
+          infowindow2.open(map, marker2);
+        });
+
+
+        var infowindow3 = new google.maps.InfoWindow({
+          content:'<p>9/4/2016</p><h4 id="firstHeading" class="firstHeading">Soccer star Megan Rapinoe takes a knee before NWSL game. </h4><p>In what she described as a “nod to Kaepernick,” Seattle Reign star Megan Rapinoe took a knee during the national anthem before her game against the Chicago Red Stars. “I am disgusted with the way [Kaepernick] has been treated and the fans and hatred he has received in all of this,” Rapinoe said. “It is overtly racist. ‘Stay in your place, black man.’ Just didn’t feel right to me. We need a more substantive conversation around race relations and the way people of color are treated."</p>'
+        });
+        var marker3 = new google.maps.Marker({
+          position: {lat: 41.764, lng: -87.805},
+          map: map,
+          title: 'Soccer star Megan Rapinoe takes a knee before NWSL game.'
+        });
+        marker3.addListener('click', function() {
+          infowindow3.open(map, marker3);
+        });
+
+
+        var infowindow4 = new google.maps.InfoWindow({
+          content:'<p>9/7/2016</p><h4 id="firstHeading" class="firstHeading">Three womens volleyball players at West Virginia University Tech take a knee during anthem.</h4><p>Keyona Morrow, a volleyball player and the vice president of the Black Student Union at WVU Tech, knelt during the anthem along with two of her teammates. “Everyone should be treated equally, no matter their color age, sex anything. Everyone needs to be on one page, everyone needs to be treated the same way,” Morrow said.</p>'
+        });
+        var marker4 = new google.maps.Marker({
+          position: {lat: 37.775, lng: -81.184},
+          map: map,
+          title: 'Three womens volleyball players at West Virginia University Tech take a knee during anthem.'
+        });
+        marker4.addListener('click', function() {
+          infowindow4.open(map, marker4);
+        });
+      
+
+
+      var infowindow5 = new google.maps.InfoWindow({
+          content:'<p>9/8/2016</p><h4 id="firstHeading" class="firstHeading">Denver Broncos’ linebacker Brandon Marshall takes a knee on NFL opening night. </h4><p>In the nationally televised kickoff to the 2016 NFL regular season, Denver Broncos linebacker Brandon Marshall seized the spotlight and took a knee. “I’m not against the police. I’m not against the military. I’m not against America. I’m against social injustice,” Marshall told reporters. “This movement is something special.” Marshall has lost two sponsors since his action. On September 14, he announced that he was partnering with several organizations in Denver and planned to donate $300 for every tackle he makes this season to those groups. On September 25, his teammate, safety T.J. Ward, joined the protest. On November 6, after eight weeks of protests, Marshall announced he would begin standing again.</p>'
+        });
+        var marker5 = new google.maps.Marker({
+          position: {lat: 37.401, lng:  -121.969},
+          map: map,
+          title: 'Denver Broncos’ linebacker Brandon Marshall takes a knee on NFL opening night.'
+        });
+        marker5.addListener('click', function() {
+          infowindow5.open(map, marker5);
+        });
+      
+
+
+
+      var infowindow6 = new google.maps.InfoWindow({
+          content:'<p>9/10/2016</p><h4 id="firstHeading" class="firstHeading">The protests spread to Alaska as six football players take a knee. </h4><p>Six players in Alaska took a knee during the anthem on a Saturday afternoon game. The principal refused to let them talk to the media afterwards.</p>'
+        });
+        var marker6 = new google.maps.Marker({
+          position: {lat: 61.207, lng:  -149.888},
+          map: map,
+          title: 'The protests spread to Alaska as six football players take a knee.'
+        });
+        marker6.addListener('click', function() {
+          infowindow6.open(map, marker6);
+        });
+      
+
+       var infowindow7 = new google.maps.InfoWindow({
+          content:'<p>9/21/2016</p><h4 id="firstHeading" class="firstHeading">Entire Indiana Fever team takes a knee during anthem before kick-off to WNBA playoffs.  </h4><p>In a momentous action, the entire Indiana Fever team linked arms and took a knee while the anthem was played before their sudden-death playoff game against the Phoenix Mercury. The players did not tell their coach, Stephanie White, what they were doing beforehand. But she was not angry in the least. “When we got into the huddle,” Catchings said, “(White) looked at each one of us and said she was proud of us.”</p>'
+        });
+        var marker7 = new google.maps.Marker({
+          position: {lat: 39.764, lng:  -86.155},
+          map: map,
+          title: 'Entire Indiana Fever team takes a knee during anthem before kick-off to WNBA playoffs. '
+        });
+        marker7.addListener('click', function() {
+          infowindow7.open(map, marker7);
+        });
+      
+
+
+      var infowindow8 = new google.maps.InfoWindow({
+          content:'<p>9/24/2016</p><h4 id="firstHeading" class="firstHeading">A football player in Hawaii takes a knee for injustices Native Hawaiins experience.  </h4><p>Mason Kaawa-Loa, a senior at Kealakehe High in Kailau-Kona, Hawaii, was inspired by Kaepernick to take a knee before football games to protest the injustices Native Hawaiian people experience in the United States.</p>'
+        });
+        var marker8 = new google.maps.Marker({
+          position: {lat: 19.668, lng:  -155.998},
+          map: map,
+          title: 'A football player in Hawaii takes a knee for injustices Native Hawaiins experience. '
+        });
+        marker8.addListener('click', function() {
+          infowindow8.open(map, marker8);
+        });
+
+
+
+         var infowindow9 = new google.maps.InfoWindow({
+          content:'<p>9/24/2016</p><h4 id="firstHeading" class="firstHeading">UNC students, band members kneel during football game. </h4><p>Before the UNC-Pittsburgh football game, a group of about 100 students of all different races remained seated and raised their fists during the national anthem. On the field, a few members of the marching band took a knee while playing the anthem as well.</p>'
+        });
+        var marker9 = new google.maps.Marker({
+          position: {lat: 35.907, lng:  -79.047},
+          map: map,
+          title: 'UNC students, band members kneel during football game. '
+        });
+        marker9.addListener('click', function() {
+          infowindow9.open(map, marker9);
+        });
+
+
+
+        var infowindow9 = new google.maps.InfoWindow({
+          content:'<p>9/25/2016</p><h4 id="firstHeading" class="firstHeading">Amid ongoing protests in Charlotte, a Panthers player raises a fist. </h4><p>Panthers safety Marcus Ball raised his right fist during the anthem, as riot police gathered outside the stadium to protect the game from the ongoing protests in Charlotte. His fellow safety Tre Boston told reporters that the team is still trying to decide a way to protest as a full team going forward. “We’re going to find a way so that nobody can twist what we are trying to do, nobody can misinterpret the direction we want to go with our protest,” Boston said.</p>'
+        });
+        var marker9 = new google.maps.Marker({
+          position: {lat: 35.226, lng:  -80.852},
+          map: map,
+          title: 'Amid ongoing protests in Charlotte, a Panthers player raises a fist. '
+        });
+        marker9.addListener('click', function() {
+          infowindow9.open(map, marker9);
+        });
+
+
+
+        var infowindow10 = new google.maps.InfoWindow({
+          content:'<p>10/1/2016</p><h4 id="firstHeading" class="firstHeading">About 200 Florida State University students remain seated during anthem. </h4><p>Before FSU’s football game against UNC, about 200 fans dressed in black remained seated during the national anthem and raised their fists in protests. “[Kaepernick] brought awareness to a topic that is really easy to sweep under the rug,” FSU student Marvel Joseph, who helped organize the protest, told FSUNews.com. “Him sitting down started a conversation, which was maybe not in the way that he planned because there were people that didn’t understand why he was standing and failed to realize that he’s doing this to bring attention to issues that affect our community.”</p>'
+        });
+        var marker10 = new google.maps.Marker({
+          position: {lat: 30.438, lng:  -84.304},
+          map: map,
+          title: 'About 200 Florida State University students remain seated during anthem. '
+        });
+        marker10.addListener('click', function() {
+          infowindow10.open(map, marker10);
+        });
+
+
+
+        var infowindow11 = new google.maps.InfoWindow({
+          content:'<p>10/2/2016</p><h4 id="firstHeading" class="firstHeading">Antonio Cromartie takes the protest to London, takes a knee during anthem. </h4><p>Cornerback Antonio Cromartie took a knee during the U.S. national anthem at London’s Wembley Stadium before the NFL’s first international game of the season. After becoming the first athlete to join Kaepernick’s protests in the U.K., he stood back up for “God Save the Queen.”</p>'
+        });
+        var marker11 = new google.maps.Marker({
+          position: {lat: 51.556, lng:  -0.278},
+          map: map,
+          title: 'Antonio Cromartie takes the protest to London, takes a knee during anthem. '
+        });
+        marker11.addListener('click', function() {
+          infowindow11.open(map, marker11);
+        });
+
+
+
+        var infowindow12 = new google.maps.InfoWindow({
+          content:'<p>10/10/2016</p><h4 id="firstHeading" class="firstHeading">NBA national anthem singer takes a knee while performing.  </h4><p>While singing the national anthem before the Sacramento Kings game, Tysse took a knee at the end of the anthem while she was singing the word “free.”She explained her decision on her Facebook page: “I cannot idly stand by as black people are unlawfully profiled, harassed and killed by our law enforcement over and over and without a drop of accountability. …Whether or not you can see if from your vantage point, there is a deep system of institutionalized racism in America, from everyday discrimination to disproportionate incarceration of people of color to people losing their lives at the hands of the police simply for being black. This is not who we claim to be as a nation. It is wrong and I won’t stand for it. #Solidarity.”</p>'
+        });
+        var marker12 = new google.maps.Marker({
+          position: {lat: 38.580, lng: -121.499},
+          map: map,
+          title: 'NBA national anthem singer takes a knee while performing. '
+        });
+        marker12.addListener('click', function() {
+          infowindow12.open(map, marker12);
+        });
+
+
+
+        var infowindow13 = new google.maps.InfoWindow({
+          content:'<p>10/22/2016</p><h4 id="firstHeading" class="firstHeading">College football players take a knee while veterans march in counter-protest.  </h4><p>Some football players at the Christian school in Illinois have taken a knee during the national anthem in recent weeks. According to to KSDK News, members of a local Veterans of Foreign Wars lodge marched to the center of the football field before the game and formed a line 50 yards long. After the anthem played, some veterans shook hands with the approximately 18 students who stood during the anthem. The rest of the athletes knelt or held fists in the air.</p>'
+        });
+        var marker13 = new google.maps.Marker({
+          position: {lat: 38.894, lng: -89.408},
+          map: map,
+          title: 'College football players take a knee while veterans march in counter-protest. '
+        });
+        marker13.addListener('click', function() {
+          infowindow13.open(map, marker13);
+        });
+
+
+
+        var infowindow14 = new google.maps.InfoWindow({
+          content:'<p>11/3/2016</p><h4 id="firstHeading" class="firstHeading">Arkansas players take a knee during anthem, prompting lawmakers to propose slashing athletic budget.  </h4><p>SSix women’s basketball players took a knee during the national anthem before an exhibition game versus Oklahoma Baptist University. According to the Arkansas Democrat-Gazette, Republican lawmakers Sen. Alan Clark, Rep. Kim Hammer, and Rep. Laurie Rushing responded by criticizing the protest and saying they would consider cutting the school’s budget. Clark said he placed a hold on the school’s budget to be considered in next year’s legislative session and says he will introduce an amendment to cut funding. Republican Gov. Asa Hutchinson also retweeted a message scolding the players for their protest.</p>'
+        });
+        var marker14 = new google.maps.Marker({
+          position: {lat: 36.0679, lng: -94.173},
+          map: map,
+          title: 'Arkansas players take a knee during anthem, prompting lawmakers to propose slashing athletic budget. '
+        });
+        marker14.addListener('click', function() {
+          infowindow14.open(map, marker14);
+        });
+
+
+        var infowindow15 = new google.maps.InfoWindow({
+          content:'<p>10/17/2017</p><h4 id="firstHeading" class="firstHeading">U.S. swimmer Anthony Ervin takes a knee during the national anthem  </h4><p>American swimmer Anthony Ervin has joined the growing number of athletes to kneel during the national anthem, taking a knee Sunday after he anchored Team USA’s mixed 200-meter medley relay team during a meet in Brazil.</p>'
+        });
+        var marker15 = new google.maps.Marker({
+          position: {lat: -22.902, lng: -43.207},
+          map: map,
+          title: 'U.S. swimmer Anthony Ervin takes a knee during the national anthem '
+        });
+        marker15.addListener('click', function() {
+          infowindow15.open(map, marker15);
+        });
+      }
+	</script>
+	<div class="col-sm-6 map-sources" style="color: grey; font-size: 80%;">Sources: ESPN.com, ThinkProgress.org</div>
+
+	<div class="col-sm-5 hr"><hr></div>
+
+	<div class="col-sm-6 tweets-intro">
+		<p style="font-style: italic;">What have people been saying about the protests? Let's check out #TakeAKnee on Twitter.</p>
+		<!-- <span class="button-span">
+			<button class="button" href="http://www.conniehanzhangjin.com/mj487/apps/twitter" target="tweet">#TakeAKnee</button>
+			<button class="button" href="http://www.conniehanzhangjin.com/mj487/apps/twit-2/" target="tweet">#VeteransForKaepernick</button>
+			<button class="button">Trump</button>
+		</span> -->
+	</div>
+
+	<!-- <script>
+	function setURL(url) {
+		document.getElementById('tweets').src = url; 
+	}
+	</script>
+ -->
+
+	<div class="col-sm-6 tweets">
+		<iframe id="tweets" name="tweets" src="http://www.conniehanzhangjin.com/mj487/apps/twitter/"></iframe>
+	</div>
+
+	<div class="col-sm-5 hr"><hr></div>
+
+	<div class="col-sm-6 numbers-intro" id="numbers">
+		<p>As the movement grows, let's look back at the reason why Kaepernick knelt in the first place, and why those who kneel today still do so. Here are some statistics from The Guardian's <a href="https://www.theguardian.com/us-news/ng-interactive/2015/jun/01/the-counted-police-killings-us-database">The Counted database</a>, which tracks people killed by police brutality each year.</p>
+	</div>
+
+	<div class="col-sm-6 year-picker">
+		<p style="font-style: italic;">Pick a year</p>
+		<select ng-model="yearly" class="picker ng-pristine ng-untouched ng-valid" onchange="loadData(this.value);" id="dropdown">
+			<option value='2015'>2015</option>
+			<option value='2016'>2016</option>
+		</select>
+	</div>
+
+	<div class="col-sm-6 total-dead">
+		 <span>
+		 	<h4>Total Dead: </h4>
+		 	<h4 id="total-dead">1146</h4>
+		 </span>
+	</div>
+
+
+	<div class="col-sm-6 dead">
+		<span>
+		 	<h4>Number of people killed by race (per million)</h4>
+		 	<span>
+			 	<h5>Black:</h5>
+			 	<p class="red" id="black">7.69</p>
+		 	</span>
+
+		 	<span>
+			 	<h5>Native American:</h5>
+			 	<p class="red" id="na">5.49</p>
+		 	</span>
+
+		 	<span>
+			 	<h5>Hispanic/Latino:</h5>
+			 	<p class="red" id="hl">3.45</p>
+		 	</span>
+
+		 	<span>
+			 	<h5>White:</h5>
+			 	<p class="red" id="white">2.95</p>
+		 	</span>
+
+		 	<span>
+			 	<h5>Asian/Pacific Islander:</h5>
+			 	<p class="red" id="aapi">1.34</p>
+		 	</span>
+		 </span>
+	</div>
+
+	<div class="col-sm-6 sources">
+		<p><b>Sources</b></p>
+		<p>APIs: <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjA8ZfKl_PXAhWvSN8KHbA3DewQFggpMAA&url=https%3A%2F%2Fdev.twitter.com%2Fdocs&usg=AOvVaw130vdtvPZL1OnKyARnzZxY">Twitter</a>, <a href="https://thecountedapi.com/">The Counted</a>, <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwil_ubhl_PXAhWBYd8KHdG5CEEQFggpMAA&url=https%3A%2F%2Fdevelopers.google.com%2Fmaps%2F&usg=AOvVaw3gHcoWqBXb9nqvRVuMKQd9">Google Maps</a></p>
+	</div>
+
+	<div class="social-icons so-bot">
+			<span class="fb icon"><a href="#"><img src="fb.png"></a></span>
+			<span class="twit icon"><a href="http://twitter.com/share?text=#TakeAKnee%20|%20The%20NFL%20Protests&url=http://conniehanzhangjin.com/mj487/final-proj/"><img src="twit.png"></a></span>
+			<span class="mail icon"><a href="mailto:connie.jin97@gmail.com"><img src="mail.png"></a></span>
+	</div>
+
+	<!-- <div class="col-sm-6 bar" id="bar" style="max-height: 600px; max-width: 100%;"></div> -->
+
+
+	<script src="http://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+ -->
+ 	<script src="js/d3.min.js"></script>
+    <script src="js/c3.min.js"></script>
+
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXgBoEfKq72Mc2u5WQ5ZFoM9rE2g4KqMg&callback=initMap">
+    </script>
+
+<!-- 	<script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script> -->
+
+
+  	<script src="js/scripts.js"></script>
+</body>
+</html>

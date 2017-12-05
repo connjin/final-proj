@@ -1,0 +1,152 @@
+body {
+	font-family: "Georgia", Georgia, serif;
+	text-align: left;
+}
+
+iframe {
+	border: black 1px solid;
+	border-radius: 5px;
+	width: 60%;
+}
+
+.red {
+	color: red;
+}
+
+.hr {
+	margin: 0 auto;
+	padding-top: 5%;
+}
+
+.hr-top {
+	margin: 0 auto;
+}
+
+.button {
+	background-color: white;
+	border-radius: 4px;
+}
+
+.button:hover {
+	background-color: black;
+	color: white;
+}
+
+.header {
+	margin-top: 5%; 
+	text-align: center;
+}
+
+.twit img {
+	max-width: 20px;
+	max-height: 20px;
+	padding-right: 2px;
+}
+
+.mail img{
+	max-width: 20px;
+	max-height: 20px;
+	padding-left: 2px;
+}
+
+.fb img {
+	max-width: 25px;
+	max-width: 25px;
+}
+
+.gif img {
+	max-width: 70%;
+	max-height: 600px;
+}
+
+.gif {
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 3%;
+}
+
+.intro-text {
+	margin: 0 auto;
+	text-align: left;
+	padding-top: 3%;
+}
+
+.tweets, .tweets-intro {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.tweets-intro {
+	padding-bottom: 1%;
+	padding-top: 5%;
+}
+
+.map-intro {
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 5%;
+}
+
+#map {
+	height: 400px;; 
+	width: 60%;
+	margin: 0 auto;
+}
+
+.map-sources {
+	margin: 0 auto;
+	padding-top: 1%;
+}
+
+.numbers-intro {
+	margin: 0 auto;
+	padding-top: 5%;
+}
+
+.year-picker {
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 5%;
+}
+
+.total-dead {
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 3%;
+}
+
+#total-dead {
+	font-size: 150%;
+	color: red;
+	max-width: 100%;
+	max-height: 10px;
+}
+
+#bar {
+	max-width: 100%;
+	max-height: 600px !important;
+}
+
+.bar {
+	max-width: 100%;
+	max-height: 600px;
+}
+
+.dead {
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 5%;
+}
+
+.so-bot {
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 6%;
+	padding-bottom: 3%;
+}
+
+.sources {
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 5%;
+}
